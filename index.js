@@ -57,3 +57,40 @@ var obj = {
 };
 
 obj.showContext();*/
+
+// Criando função de multiplicação
+
+/*
+function multiply(a, b) {
+    return a * b;
+}
+console.log(multiply(10, 20));
+
+//Arrow function
+var multiply = (a, b) => a * b;
+console.log(multiply(10, 30));*/
+
+/*Para validar o  valor 0
+function multiply(a, b = 1) {
+    return a * b;
+
+}
+console.log(multiply(5, 0));
+
+var multiply = (a, b = 1) => a * b;
+console.log(multiply(5, 0));*/
+
+//Função lazy evalluation
+
+//Para gerar um numero Randômico
+/*
+function randomNumber() {
+    return Math.random() * 10;
+}
+
+function multiply(a, b = 1) {
+    return a * b;
+}
+
+
+console.log(randomNumber());*/
