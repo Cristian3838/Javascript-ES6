@@ -1,47 +1,47 @@
 //Reccebe valor da função
-/*function log(value) {
+function log(value) {
     console.log(value);
 }
 
-log("Testando java");*/
+log("Testando java");
 
 
-/*var log = function(value) {
+var log = function(value) {
     console.log(value);
 
 }
 
-log("Testando Java")*/
+log("Testando Java")
 
 
-/*Função de soma
+//Função de soma
 
 var sun = function(a, b) {
     return a + b;
 };
 
-console.log(sun(5, 5));*/
+console.log(sun(5, 5));
 
 
-/*Arrow function
+//Arrow function
 
 var sum = (a, b) => a + b;
-console.log(sum(5, 100));*/
+console.log(sum(5, 100));
 
-/*
+
 var createObj = () => ({ teste: 123 });
-console.log(createObj());*/
+console.log(createObj());
 
-/*
+
 function Car() {
     this.Objeto = "bar";
 }
-console.log(new Car());*/
+console.log(new Car());
 
 
 //Arrow functions
 
-/*
+
 var obj = {
     showContext: function showContext() {
 
@@ -56,21 +56,22 @@ var obj = {
     }
 };
 
-obj.showContext();*/
+obj.showContext();
 
 // Criando função de multiplicação
 
-/*
+
 function multiply(a, b) {
     return a * b;
 }
 console.log(multiply(10, 20));
 
 //Arrow function
-var multiply = (a, b) => a * b;
-console.log(multiply(10, 30));*/
 
-/*Para validar o  valor 0
+var multiply = (a, b) => a * b;
+console.log(multiply(10, 30));
+
+//Para validar o  valor 0
 function multiply(a, b = 1) {
     return a * b;
 
@@ -78,12 +79,12 @@ function multiply(a, b = 1) {
 console.log(multiply(5, 0));
 
 var multiply = (a, b = 1) => a * b;
-console.log(multiply(5, 0));*/
+console.log(multiply(5, 0));
 
 //Função lazy evalluation
 
 //Para gerar um numero Randômico
-/*
+
 function randomNumber() {
     return Math.random() * 10;
 }
@@ -93,4 +94,28 @@ function multiply(a, b = 1) {
 }
 
 
-console.log(randomNumber());*/
+console.log(randomNumber());
+
+
+//para textos
+var obj = {
+    prop1: "Digital Innovation One",
+    prop2: "Upgrade"
+};
+
+//Para calculos
+var obj = {
+    sum: function sum(a, b) {
+        return a + b;
+    }
+};
+
+console.log(obj.sum(5, 7));
+
+
+var obj = {
+    sum(a, b) {
+        return a + b;
+    }
+};
+console.log(obj.sum(15, 17));
