@@ -119,3 +119,32 @@ var obj = {
     }
 };
 console.log(obj.sum(15, 17));
+
+//Criando a variavel propName
+var propName = "teste";
+var obj = {
+    [propName + " Concat"]: "prop value"
+};
+
+console.log(obj);
+
+//Functio spread operator
+
+function sum(...args) {
+    console.log(arguments);
+}
+console.log(sum(5, 5, 5, 2, 3));
+
+function sum(...args) {
+    return args.reduce((acc, value) => acc + value, 0);
+
+}
+console.log(sum(5, 9, 5, 3, 3));
+
+
+//Function Rest operator
+function sum(...rest) {
+    console.log(5, 9, rest);
+
+};
+console.log(sum(5, 9, 5, 3, 3));
