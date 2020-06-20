@@ -5,13 +5,11 @@ function log(value) {
 
 log("Testando java");
 
-
 var log = function(value) {
     console.log(value);
-
 }
 
-log("Testando Java")
+log("Testando Java");
 
 
 //Função de soma
@@ -148,3 +146,28 @@ function sum(...rest) {
 
 };
 console.log(sum(5, 9, 5, 3, 3));
+
+
+
+//Spread operator
+const str = "Cristian";
+
+function logArgs(...args) {
+    console.log(args);
+}
+
+logArgs(...str);
+
+
+
+
+//Construindo Arrays e concatenando
+const arr = [1, 2, 3, 4, 5, 6];
+
+function logArgs(...args) {
+    console.log(args);
+}
+const arr2 = [...arr, 7, 8, 9];
+const arr3 = [...arr2, 9, 10, 11, 12];
+
+logArgs(arr3);
