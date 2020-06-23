@@ -171,3 +171,40 @@ const arr2 = [...arr, 7, 8, 9];
 const arr3 = [...arr2, 9, 10, 11, 12];
 
 logArgs(arr3);
+
+
+//Ultilizando o spread em objetos iteraveis
+var obj = {
+    test: 123
+};
+var obj2 = {
+    ...obj,
+    test2: "Iai"
+};
+
+var objMerged = {
+    ...obj,
+    ...obj2,
+    test3: "Concatenndo com spread"
+}
+
+console.log(objMerged);
+
+
+//Destructuring assignment
+
+var [apple2, banana2, orange2, tomato2, [abacate2]] = ["apple", "banana", "orange", "tomato", ["abacate"]];
+console.log(abacate2);
+
+var obj = {
+    name: "Cristian",
+    props: {
+        age: 26,
+        favoriteColors: ["Red", "Orange"]
+    }
+};
+
+var {
+    props: { age: age2, favoriteColors: [color1, color2] }
+} = obj;
+console.log(age2, color1, color2);
