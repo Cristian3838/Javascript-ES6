@@ -208,3 +208,28 @@ var {
     props: { age: age2, favoriteColors: [color1, color2] }
 } = obj;
 console.log(age2, color1, color2);
+
+
+//Generators
+
+const uniqueId = Symbol("Testando java")
+console.log(uniqueId);
+
+const uniqueId2 = Symbol("Concatenando Java")
+console.log(uniqueId, uniqueId2);
+
+Symbol.iterator;
+Symbol.split;
+Symbol.toStringTag;
+
+const [] = [1, 2, 3, 4];
+const it = arr[Symbol.iterator]();
+
+while (true) {
+    let { value, done } = it.next();
+
+    if (done) {
+        break;
+    }
+    console.log(value);
+}
