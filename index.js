@@ -233,3 +233,75 @@ while (true) {
     }
     console.log(value);
 }
+
+//O Destructing abaixo substitui o while
+Symbol.iterator;
+Symbol.split;
+Symbol.toStringTag;
+
+
+const stringer = "Angular"
+for (let value of stringer) {
+    console.log(value);
+}
+
+const matriz = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+for (let value of matriz) {
+    console.log(value);
+}
+
+
+const cascata = {
+    values: [1, 2, 3, 4],
+    [Symbol.iterator]() {
+        let i = 0;
+        return {
+            next: () => {
+                i++;
+                return {
+                    value: this.values[i - 1],
+                    done: i > this.values.length
+
+                };
+            }
+        };
+    }
+};
+
+for (let value of cascata) {
+    console.log(value)
+}
+
+const casca = {
+    values: [1, 2, 3, 4],
+    [Symbol.iterator]() {
+        let i = 0;
+        return {
+            next: () => {
+                i++;
+                return {
+                    value: this.values[i - 1],
+                    done: i > this.values.length
+
+                };
+            }
+        };
+    }
+};
+
+const ite = casca[Symbol.iterator]();
+console.log(ite.next());
+console.log(ite.next());
+console.log(ite.next());
+console.log(ite.next());
+console.log(ite.next());
+
+
+var amigo = {
+    sum(a, b, c) {
+        return a + b + c;
+    }
+
+};
+
+console.log(amigo.sum(1000, 2, 3) + " Esta é minha idade");
