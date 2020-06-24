@@ -305,3 +305,30 @@ var amigo = {
 };
 
 console.log(amigo.sum(1000, 2, 3) + " Esta é minha idade");
+
+function hello() {
+    console.log("hello");
+    console.log("Cristian");
+    console.log("Jonas");
+
+};
+
+hello();
+
+
+//pausa com Generator
+function* hello() {
+    console.log("hello");
+    yield 1;
+    console.log("Cristian");
+    yield 2;
+    console.log("Jonas");
+    yield 4;
+};
+
+const se = hello();
+console.log(se.next());
+console.log(se.next());
+console.log(se.next());
+console.log(se.next());
+hello();
