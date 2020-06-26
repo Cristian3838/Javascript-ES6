@@ -332,3 +332,23 @@ console.log(se.next());
 console.log(se.next());
 console.log(se.next());
 hello();
+
+//Promises
+
+const doSomethingPromisse = () =>
+    new Promise((resolve, reject) => {
+        setTimeout(function() {
+            resolve("First data");
+        }, 1000);
+    });
+
+const doOtherthingPromisse = () =>
+    new Promise((resolve, reject) => {
+        setTimeout(function() {
+            resolve("Second data");
+        }, 1000);
+    });
+
+Promise.all([doSomethingPromisse(), doOtherthingPromisse()]).then(data => {
+    console.log(data)
+});
