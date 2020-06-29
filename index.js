@@ -352,3 +352,12 @@ const doOtherthingPromisse = () =>
 Promise.all([doSomethingPromisse(), doOtherthingPromisse()]).then(data => {
     console.log(data)
 });
+
+//Fetch
+fetch('/launch.json').then(responseStream => {
+    responseStream.json().then(launch => {
+        console.log(launch)
+    })
+
+
+});
