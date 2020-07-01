@@ -353,11 +353,56 @@ Promise.all([doSomethingPromisse(), doOtherthingPromisse()]).then(data => {
     console.log(data)
 });
 
+
+
 //Fetch
 fetch('/launch.json').then(responseStream => {
     responseStream.json().then(launch => {
         console.log(launch)
-    })
+    });
 
 
 });
+
+fetch("http://localhost:8080/launch.json")
+    .then(responseStream => {
+        if (responseStream.status === 200) {
+            return responseStream.json();
+        } else {
+            throw new Error("Request error");
+        }
+    })
+    .then(data => {
+        console.log(data);
+    })
+    .catch(err => {
+        console.log("Error: ", err);
+    });
+
+//Async await
+
+const simpleFunc = async() => {
+    return 123456789;
+
+}
+console.log(simpleFunc());
+
+
+var simpleFunc = async() => {
+    return 123456789;
+};
+simpleFunc().then(data => {
+    console.log(data);
+});
+
+//EventEmitter
+
+
+const EventEmitter = require("events");
+
+const emitter = new EventEmitter();
+
+emitter.on("user logged", data => {
+    console.log(data);
+});
+emitter.emit("User logged", { user: "Cristian Jonas" });
