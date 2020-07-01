@@ -355,7 +355,7 @@ Promise.all([doSomethingPromisse(), doOtherthingPromisse()]).then(data => {
 
 
 
-//Fetch
+//Fetch json
 fetch('/launch.json').then(responseStream => {
     responseStream.json().then(launch => {
         console.log(launch)
@@ -379,7 +379,7 @@ fetch("http://localhost:8080/launch.json")
         console.log("Error: ", err);
     });
 
-//Async await
+//Async await Json
 
 const simpleFunc = async() => {
     return 123456789;
@@ -395,7 +395,7 @@ simpleFunc().then(data => {
     console.log(data);
 });
 
-//EventEmitter
+//EventEmitter Json
 
 
 const EventEmitter = require("events");
