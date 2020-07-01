@@ -1,0 +1,22 @@
+{
+    "name": "es6",
+    "version": "1.0.0",
+    "description": "Javascript ES6",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Cristian3838/Javascript-ES6.git"
+    },
+    "keywords": [],
+    "author": "Cristian Jonas",
+    "license": "ISC",
+    "devDependencies": { "mocha": "^8.0.1" },
+
+    "bugs": {
+        "url": "https://github.com/Cristian3838/Javascript-ES6/issues"
+    },
+    "homepage": "https://github.com/Cristian3838/Javascript-ES6#readme"
+}

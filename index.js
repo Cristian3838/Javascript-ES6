@@ -356,15 +356,15 @@ Promise.all([doSomethingPromisse(), doOtherthingPromisse()]).then(data => {
 
 
 //Fetch json
-fetch('/launch.json').then(responseStream => {
+/*fetch('/launch.json').then(responseStream => {
     responseStream.json().then(launch => {
         console.log(launch)
     });
 
 
-});
+});*/
 
-fetch("http://localhost:8080/launch.json")
+/*fetch("http://localhost:8080/launch.json")
     .then(responseStream => {
         if (responseStream.status === 200) {
             return responseStream.json();
@@ -377,32 +377,38 @@ fetch("http://localhost:8080/launch.json")
     })
     .catch(err => {
         console.log("Error: ", err);
-    });
+    });*/
 
 //Async await Json
 
-const simpleFunc = async() => {
+/*const simpleFunc = async() => {
     return 123456789;
 
 }
 console.log(simpleFunc());
 
 
-var simpleFunc = async() => {
+const simpleFunc = async() => {
     return 123456789;
 };
 simpleFunc().then(data => {
     console.log(data);
-});
+});*/
 
 //EventEmitter Json
 
 
 const EventEmitter = require("events");
 
-const emitter = new EventEmitter();
+class User extends EventEmitter {
+    userLogged(data) {
+        this.emit("User Logged", data);
+    }
+}
 
-emitter.on("user logged", data => {
+const users = new Users();
+users.on("Users logged", data => {
     console.log(data);
 });
-emitter.emit("User logged", { user: "Cristian Jonas" });
+
+users.userLogged({ user: "Cristian jonas" });
